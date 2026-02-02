@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💕 For My Kuchu 💕</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Floating Hearts Container -->
     <div id="hearts-container"></div>
-    
+
     <!-- Sparkles Container -->
     <div id="sparkles-container"></div>
-    
+
     <!-- Confetti Container -->
     <div id="confetti-container"></div>
 
@@ -22,23 +25,10 @@
         <!-- Photos -->
         <div class="photos-container">
             <div class="photo-frame left">
-                <img src="images/kuchu.jpg" alt="Kuchu">
-                <span class="photo-label">Kuchu 💕</span>
+                <img src="images/kuchu.jpg" alt="Photo 1">
             </div>
             <div class="photo-frame right">
-                <img src="images/keshu.jpg" alt="Keshu">
-                <span class="photo-label">Keshu 🌸</span>
-            </div>
-        </div>
-
-        <!-- Countdown Timer -->
-        <div class="countdown-container">
-            <h3>⏰ Countdown to Valentine's Day 2026 ⏰</h3>
-            <div id="countdown">
-                <div class="time-box"><span id="days">00</span><label>Days</label></div>
-                <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
-                <div class="time-box"><span id="minutes">00</span><label>Minutes</label></div>
-                <div class="time-box"><span id="seconds">00</span><label>Seconds</label></div>
+                <img src="images/keshu.jpg" alt="Photo 2">
             </div>
         </div>
 
@@ -46,11 +36,11 @@
         <div class="question-container">
             <h1>Hey Kuchu! 💖</h1>
             <h2>Will you be my Valentine?</h2>
-            
+
             <!-- Buttons -->
             <div class="buttons-container">
                 <button id="yes-btn" onclick="sayYes()">YES! 💕</button>
-                <button id="no-btn" onmouseover="runAway()" onclick="runAway()">No</button>
+                <button id="no-btn" onclick="runAway()">No 😢</button>
             </div>
         </div>
     </div>
@@ -60,24 +50,31 @@
         <div class="celebration-container">
             <h1 class="yay-text">YAYYYYYYYYYYYYYYY</h1>
             <h2 class="happy-text">Keshu happppppiiiiiiiiiiii 🥹💕</h2>
-            
+
+            <!-- Countdown Timer (shows after YES) -->
+            <div class="countdown-container">
+                <h3>⏰ Countdown to Valentine's Day 2026 ⏰</h3>
+                <div id="countdown">
+                    <div class="time-box"><span id="days">00</span><label>Days</label></div>
+                    <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
+                    <div class="time-box"><span id="minutes">00</span><label>Minutes</label></div>
+                    <div class="time-box"><span id="seconds">00</span><label>Seconds</label></div>
+                </div>
+            </div>
+
             <div class="video-container">
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/KN3IemyqJJw?autoplay=1&loop=1" 
-                    title="Happy Happy Happy Cat" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KN3IemyqJJw?autoplay=1&loop=1"
+                    title="Happy Happy Happy Cat" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
-            
+
             <p class="love-message">I love you so much! 💕🌸✨</p>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
