@@ -122,16 +122,16 @@ function startCountdown() {
 // ===== Runaway No Button =====
 let noClickCount = 0;
 const taunts = [
-    "Hehe nice try! 😜",
-    "Nope! Try again! 🏃‍♀️",
-    "You can't catch me! 😈",
-    "Aww come on, just say yes! 🥺",
-    "I'm too fast for you! ⚡",
-    "Give up already! 💕",
-    "Just click YES pleaseee 🙏",
-    "NEVER! 😂",
-    "You really thought? 🤭",
-    "Keshu will be sad 😢"
+    "Hehe nice try!",
+    "Nope! Try again!",
+    "You can't catch me!",
+    "Aww come on, just say yes!",
+    "I'm too fast for you!",
+    "Give up already!",
+    "Just click YES pleaseee",
+    "NEVER!",
+    "You really thought?",
+    "Keshu will be sad"
 ];
 
 function runAway() {
