@@ -1,0 +1,11 @@
+{
+  "name": "valentine-kuchu",
+  "version": "1.0.0",
+  "description": "Valentine's Day website for Kuchu 💕",
+  "scripts": {
+    "start": "npx serve public"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.8"
+  }
+}

@@ -1,0 +1,413 @@
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 50%, #e6f0ff 100%);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ===== Floating Hearts ===== */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: floatHeart 6s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatHeart {
+    0%, 100% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ===== Sparkles ===== */
+#sparkles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 12px;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* ===== Confetti ===== */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: confettiFall 4s linear infinite;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ===== Photos ===== */
+.photos-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.photo-frame {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+}
+
+.photo-frame.right {
+    transform: rotate(3deg);
+}
+
+.photo-frame:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.photo-frame img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo-label {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #e75480;
+}
+
+/* ===== Countdown ===== */
+.countdown-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.countdown-container h3 {
+    color: #9b59b6;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#countdown {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: linear-gradient(135deg, #ffb6c1 0%, #dda0dd 100%);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(221, 160, 221, 0.4);
+    min-width: 80px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.time-box label {
+    font-size: 0.8rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== Question ===== */
+.question-container {
+    text-align: center;
+    z-index: 100;
+}
+
+.question-container h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #e75480;
+    text-shadow: 2px 2px 4px rgba(231, 84, 128, 0.3);
+    margin-bottom: 10px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.question-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #9b59b6;
+    margin-bottom: 40px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ===== Buttons ===== */
+.buttons-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#yes-btn {
+    padding: 20px 60px;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff8e53 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.5);
+    transition: all 0.3s ease;
+    animation: yesGlow 1.5s ease-in-out infinite;
+}
+
+#yes-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.7);
+}
+
+@keyframes yesGlow {
+    0%, 100% {
+        box-shadow: 0 10px 30px rgba(255, 107, 157, 0.5);
+    }
+    50% {
+        box-shadow: 0 10px 50px rgba(255, 107, 157, 0.8);
+    }
+}
+
+#no-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    background: #ccc;
+    color: #666;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    position: absolute;
+}
+
+/* ===== Success Page ===== */
+.celebration-container {
+    text-align: center;
+    z-index: 100;
+}
+
+.yay-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #ff6b9d;
+    text-shadow: 3px 3px 6px rgba(255, 107, 157, 0.5);
+    animation: bounce 0.5s ease infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.happy-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #9b59b6;
+    margin-bottom: 40px;
+    animation: wiggle 0.5s ease infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+.video-container {
+    margin: 30px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(155, 89, 182, 0.4);
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.love-message {
+    font-size: 1.5rem;
+    color: #e75480;
+    margin-top: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Heart Explosion ===== */
+.heart-explosion {
+    position: fixed;
+    font-size: 30px;
+    animation: explodeHeart 1s ease-out forwards;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+@keyframes explodeHeart {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translate(var(--tx), var(--ty));
+        opacity: 0;
+    }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .question-container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .question-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    #yes-btn {
+        padding: 15px 40px;
+        font-size: 1.4rem;
+    }
+    
+    .photo-frame img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .yay-text {
+        font-size: 2.5rem;
+    }
+    
+    .happy-text {
+        font-size: 1.8rem;
+    }
+    
+    .time-box span {
+        font-size: 1.5rem;
+    }
+}
