@@ -225,7 +225,35 @@ body {
     font-family: 'Reenie Beanie', cursive;
     font-size: 3.5rem;
     color: #9b59b6;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+}
+
+.hint-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translateX(10px) rotate(5deg);
+    }
+}
+
+.shake {
+    animation: shake 0.3s ease;
 }
 
 @keyframes pulse {
